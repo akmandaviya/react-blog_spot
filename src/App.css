@@ -5,6 +5,8 @@ body {
   font-family: 'Sarabun', sans-serif;
   padding: 0%;
   margin: 0%;
+  background-image: linear-gradient(rgba(30, 32, 39, 0.7),rgba(4,9,30,0.7)),url(./assets/bg-image.jpg);
+  background-size: 1500px;
 }
 
 nav {
@@ -12,32 +14,45 @@ nav {
   padding: 5px;
   width: 100%;
   height: 60px;
-  background-color: rgb(4, 204, 197);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   color: white;
   text-decoration: none;
 }
 
 a {
-  color: white;
+  padding: 5px;
+  border: 1.5px solid rgb(0,230,255);
+  border-radius: 5px;
+  color: rgb(0,230,255);
   text-decoration: none;
   margin: 10px;
   font-size: 25px;
+  box-shadow: 0 -1px 0 rgba(147, 13, 13, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s, box-shadow 0.3s, padding 0.3s;
+
+}
+
+a:hover {
+  border: 1.5px solid rgb(224,231,34);
+  background-color: transparent;
+  color: rgb(224,231,34);
+  padding: 13px;
+  background-color: none;
 }
 
 .createPostPage {
   width: 100%;
-  height: calc(100vh - 80px);
   display: grid;
   place-items: center;
 }
 
 .cpContainer {
+  margin-top: 20px;
   width: 500px;
   height: auto;
-  padding: 20px;
+  padding: 15px;
   background-color: rgb(13, 177, 171);
   border-radius: 12px;
   color: white;
@@ -60,23 +75,6 @@ a {
   flex-direction: column;
 }
 
-.inputGp input,
-.inputGp textarea {
-  font-size: 18px;
-  border: none;
-  border-radius: 2px;
-  padding: 5px;
-}
-
-.inputGp input {
-  height: 40px;
-  background-color: antiquewhite;
-}
-.inputGp textarea {
-  height: 150px;
-  background-color: antiquewhite;
-
-}
 .cp-button {
   margin-top: 20px;
   color: white;
@@ -88,28 +86,53 @@ a {
   border-radius: 5px;
   height: 50px;
   width: 90px;
+  transition: 0.3s;
+
 }
 
-/* .cpContainer button {
-  width: fit-content;
-  margin-top: 20px;
-  margin-left: 190px;
-  height: 40px;
-  border: 3px solid white;
-  border-radius: 5px;
-  cursor: pointer;
+.cp-button:hover {
+  background-color: black;
+}
+
+.login-heading {
+  color: white;
+}
+
+.inputGp input,
+.inputGp textarea {
   font-size: 18px;
-} */
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.inputGp input {
+  height: 40px;
+  background-color: antiquewhite;
+}
+
+.inputGp input:hover {
+  background-color: black;
+  color: white;
+}
+
+.inputGp textarea {
+  height: 150px;
+  background-color: antiquewhite;
+
+}
+.inputGp textarea:hover {
+  background-color: black;
+  color: white;
+}
 
 input,
 textarea {
   margin-top: 5px;
 }
 
-
 .loginPage {
   width: 100vw;
-  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,18 +140,18 @@ textarea {
 }
 
 .login-credentials {
-  padding: 10px;
-  border: 1px solid black;
+  padding: 20px;
+  border: 1px solid rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin: 10px;
 }
 
 .loginPage p {
   font-size: 30px;
 }
 
-/* GOOGLE BUTTOn */
 .login-with-google-btn {
   cursor: pointer;
   padding: 5px 16px 12px 42px;
@@ -136,23 +159,19 @@ textarea {
   color: #ffffff;
   font-size: 25px;
   font-weight: 500;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
-  background-color: rgb(77, 155, 251);
+  background-color: rgb(66 133 244);
   background-repeat: no-repeat;
   background-position: 12px 11px;
   border: 1px solid black;
   border-radius: 10px;
-
+  transition: background-color 0.3s;
 }
 
-/* .login-with-google-btn:disabled {
-  filter: grayscale(100%);
-  background-color: #ebebeb;
-  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
-  cursor: not-allowed;
-} */
+.login-with-google-btn:hover {
+  background-color: black;
+}
 
-.login-with-email {
+.login-with-email-btn {
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
   padding: 7px;
@@ -165,6 +184,65 @@ textarea {
   background-color: rgb(247, 50, 5)
 }
 
+.login-with-email-btn:hover {
+  background-color: black;
+}
+
+.login-with-guest-btn{
+  cursor: pointer;
+  padding: 5px 16px 12px 42px;
+  border: none;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 500;
+  background-color: rgb(127, 130, 135);
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.login-with-guest-btn:hover{
+  background-color: black;
+}
+
+.login-with-fb-btn {
+  cursor: pointer;
+  padding: 5px 16px 12px 42px;
+  border: none;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 500;
+  background-color: rgb(66 103 178);
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.login-with-fb-btn:hover {
+background-color: black;
+}
+
+.login-with-phone-btn {
+  cursor: pointer;
+  padding: 5px 16px 12px 42px;
+  border: none;
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 500;
+  background-color: rgb(84, 212, 137);
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+.login-with-phone-btn:hover{
+  background-color: black;
+}
 .homePage {
   width: 100%;
   min-height: calc(100vh - 80px);
@@ -173,6 +251,18 @@ textarea {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+}
+
+.homePage h1 {
+  font-family: 'The Nautigal', cursive;
+  font-size: 80px;
+  color: rgb(0,230,255);
+  margin-top: -10px;
+  transition: 0.3s;
+}
+
+.homePage h1:hover {
+  color: rgb(224,231,34);
 }
 
 .homePage .post {
@@ -204,7 +294,6 @@ textarea {
 
 .deletePost button {
   border: none;
-
   background: none;
   font-size: 30px;
   cursor: pointer;
@@ -217,4 +306,23 @@ textarea {
   width: 100%;
   overflow: hidden;
   overflow-y: auto;
+}
+
+
+.signout {
+  padding: 5px;
+  border: 1.5px solid rgb(0,230,255);
+  border-radius: 5px;
+  color: rgb(0,230,255);
+  text-decoration: none;
+  margin: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s,padding 0.3s;
+}
+.signout:hover{
+  border: 1.5px solid rgb(210,39,48);
+  background-color: transparent;
+  color: rgb(210,39,48);
+  padding: 13px;
 }

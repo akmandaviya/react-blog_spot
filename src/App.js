@@ -9,7 +9,7 @@ import { auth } from "./firebase-data";
 
 
 function App  () {
-const [isAuth, setIsAuth] = useState(false)
+const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"))
 
 
 const signOutHere = () => {
@@ -26,13 +26,19 @@ return (
     {/* navbar */}
     <nav>
       <Link to='/'>Home</Link>
+      
+     {!isAuth ? (<Link to='/login'>Login</Link>
+     ) : (
+      <>
       <Link to='/createpost'>New Blog</Link>
-     {!isAuth ? <Link to='/login'>Login</Link> : <button onClick={signOutHere}>Sign Out</button>} 
+     <button className="signout" onClick={signOutHere}>Sign Out</button>
+     </>
+     )} 
     </nav>
 
     <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/createpost" element={<CreatePost/>}/>
+      <Route path="/" element={<Home isAuth={isAuth} />} />
+      <Route path="/createpost" element={<CreatePost isAuth={isAuth}/>}/>
       <Route path="/login" element={<Login setIsAuth={setIsAuth}/>}/>
     </Routes>
   </Router>
