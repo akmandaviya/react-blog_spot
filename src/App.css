@@ -5,7 +5,7 @@ body {
   font-family: 'Sarabun', sans-serif;
   padding: 0%;
   margin: 0%;
-  background-image: linear-gradient(rgba(30, 32, 39, 0.7),rgba(4,9,30,0.7)),url(./assets/bg-image.jpg);
+  background-image: linear-gradient(rgba(30, 32, 39, 0.7),rgba(91, 93, 102, 0.7)),url(./assets/bg-image.jpg);
   background-size: 1500px;
 }
 
@@ -17,9 +17,33 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   text-decoration: none;
 }
+
+
+ .signout {
+  background-color: transparent;
+  padding: 5px;
+  border: 1.5px solid rgb(0,230,255);
+  border-radius: 5px;
+  color: rgb(0,230,255);
+  text-decoration: none;
+  margin: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s,padding 0.3s, font-size 0.3s;
+}
+.signout:hover{
+  font-size: 20px;
+  border: 1.5px solid rgb(210,39,48);
+  background-color: none;
+  color: rgb(210,39,48);
+  /* padding: 10px; */
+  border: 1.5px solid rgb(210,39,48);
+
+}
+
+
 
 a {
   padding: 5px;
@@ -29,8 +53,7 @@ a {
   text-decoration: none;
   margin: 10px;
   font-size: 25px;
-  box-shadow: 0 -1px 0 rgba(147, 13, 13, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
-  transition: background-color 0.3s, box-shadow 0.3s, padding 0.3s;
+  transition: background-color 0.3s, padding 0.3s;
 
 }
 
@@ -309,20 +332,3 @@ background-color: black;
 }
 
 
-.signout {
-  padding: 5px;
-  border: 1.5px solid rgb(0,230,255);
-  border-radius: 5px;
-  color: rgb(0,230,255);
-  text-decoration: none;
-  margin: 10px;
-  font-size: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s,padding 0.3s;
-}
-.signout:hover{
-  border: 1.5px solid rgb(210,39,48);
-  background-color: transparent;
-  color: rgb(210,39,48);
-  padding: 13px;
-}
