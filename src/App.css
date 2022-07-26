@@ -5,12 +5,11 @@ body {
   font-family: 'Sarabun', sans-serif;
   padding: 0%;
   margin: 0%;
-  background-image: linear-gradient(rgba(30, 32, 39, 0.7),rgba(91, 93, 102, 0.7)),url(./assets/bg-image.jpg);
   background-size: 1500px;
+  background-position: center;
 }
 
 nav {
-  font-family: 'Indie Flower', cursive;  margin: 0;
   padding: 5px;
   width: 100%;
   height: 60px;
@@ -18,51 +17,56 @@ nav {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  position: relative;
+  left: -200px;
+  top: 20px;
 }
 
+.sign-in {
+position: inherit;
+right: -450px;
+font-size: large;
+}
+
+nav h1 {
+  font-family: 'Sail', cursive;
+
+}
 
  .signout {
-  background-color: transparent;
+  background-color: white;
   padding: 5px;
-  border: 1.5px solid rgb(0,230,255);
   border-radius: 5px;
-  color: rgb(0,230,255);
+  color: rgb(1, 13, 14);
   text-decoration: none;
   margin: 10px;
-  font-size: 15px;
+  font-size: 10px;
   cursor: pointer;
-  transition: background-color 0.3s,padding 0.3s, font-size 0.3s;
+  transition: background-color;
+  position: relative;
+  left: 450px;
 }
+
 .signout:hover{
-  font-size: 20px;
-  border: 1.5px solid rgb(210,39,48);
-  background-color: none;
-  color: rgb(210,39,48);
-  /* padding: 10px; */
-  border: 1.5px solid rgb(210,39,48);
+  background-color: red;
 
 }
-
-
 
 a {
   padding: 5px;
-  border: 1.5px solid rgb(0,230,255);
   border-radius: 5px;
-  color: rgb(0,230,255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   margin: 10px;
-  font-size: 25px;
-  transition: background-color 0.3s, padding 0.3s;
-
+  font-weight: 500;
+  font-size: 15px;
+  background-color: transparent;
+  transition: background-color 0.3s; 
+  color: grey;
 }
 
 a:hover {
-  border: 1.5px solid rgb(224,231,34);
-  background-color: transparent;
-  color: rgb(224,231,34);
-  padding: 13px;
-  background-color: none;
+color: black;
 }
 
 .createPostPage {
@@ -76,7 +80,7 @@ a:hover {
   width: 500px;
   height: auto;
   padding: 15px;
-  background-color: rgb(13, 177, 171);
+  background-color: rgb(231, 60, 163);
   border-radius: 12px;
   color: white;
   display: flex;
@@ -85,7 +89,7 @@ a:hover {
 
 .cpContainer h1 {
   text-align: center;
-  text-transform: uppercase;
+  font-weight: 300;
 }
 
 .cpContainer label {
@@ -101,24 +105,24 @@ a:hover {
 .cp-button {
   margin-top: 20px;
   color: white;
-  background-color: rgb(13, 177, 171);
+  background-color: transparent;
   width: fit-content;
   margin-left: 215px;
   cursor: pointer;
   border: 2px solid white;
   border-radius: 5px;
-  height: 50px;
-  width: 90px;
+  height: 45px;
+  width: 85px;
   transition: 0.3s;
 
 }
 
 .cp-button:hover {
-  background-color: black;
+  background-color: rgb(11, 11, 11);
 }
 
 .login-heading {
-  color: white;
+  color: black;
 }
 
 .inputGp input,
@@ -164,7 +168,6 @@ textarea {
 
 .login-credentials {
   padding: 20px;
-  border: 1px solid rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -173,19 +176,16 @@ textarea {
 
 .loginPage p {
   font-size: 30px;
-}
+} 
 
 .login-with-google-btn {
   cursor: pointer;
-  padding: 5px 16px 12px 42px;
+  padding: 5px;
   border: none;
   color: #ffffff;
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 450;
   background-color: rgb(66 133 244);
-  background-repeat: no-repeat;
-  background-position: 12px 11px;
-  border: 1px solid black;
   border-radius: 10px;
   transition: background-color 0.3s;
 }
@@ -194,78 +194,6 @@ textarea {
   background-color: black;
 }
 
-.login-with-email-btn {
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
-  padding: 7px;
-  border: none;
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: 500;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: rgb(247, 50, 5)
-}
-
-.login-with-email-btn:hover {
-  background-color: black;
-}
-
-.login-with-guest-btn{
-  cursor: pointer;
-  padding: 5px 16px 12px 42px;
-  border: none;
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: 500;
-  background-color: rgb(127, 130, 135);
-  background-repeat: no-repeat;
-  background-position: 12px 11px;
-  border: 1px solid black;
-  border-radius: 10px;
-  transition: background-color 0.3s;
-}
-
-.login-with-guest-btn:hover{
-  background-color: black;
-}
-
-.login-with-fb-btn {
-  cursor: pointer;
-  padding: 5px 16px 12px 42px;
-  border: none;
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: 500;
-  background-color: rgb(66 103 178);
-  background-repeat: no-repeat;
-  background-position: 12px 11px;
-  border: 1px solid black;
-  border-radius: 10px;
-  transition: background-color 0.3s;
-}
-
-.login-with-fb-btn:hover {
-background-color: black;
-}
-
-.login-with-phone-btn {
-  cursor: pointer;
-  padding: 5px 16px 12px 42px;
-  border: none;
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: 500;
-  background-color: rgb(84, 212, 137);
-  background-repeat: no-repeat;
-  background-position: 12px 11px;
-  border: 1px solid black;
-  border-radius: 10px;
-  transition: background-color 0.3s;
-}
-.login-with-phone-btn:hover{
-  background-color: black;
-}
 .homePage {
   width: 100%;
   min-height: calc(100vh - 80px);
@@ -273,21 +201,58 @@ background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 40px;
+  position: relative;
+  left: 10px;
 }
 
 .homePage h1 {
-  font-family: 'The Nautigal', cursive;
-  font-size: 80px;
-  color: rgb(0,230,255);
-  margin-top: -10px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(17, 18, 18);
   transition: 0.3s;
+  margin-left: -230px;
+  position: relative;
+  top: 30px;
 }
 
 .homePage h1:hover {
-  color: rgb(224,231,34);
+  color: rgb(2, 12, 55);
 }
 
+.save-btn {
+  border: none;
+  border-radius: 8px;
+  height: 45px;
+  width: 85px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  position: relative;
+  right: -230px;
+  top: -15px;
+}
+.save-btn:hover {
+  background-color: rgb(192, 192, 192);
+}
+.like-btn {
+  border: none;
+  border-radius: 8px;
+  background-color: #ea4c89;
+  color: white;
+  height: 45px;
+  width: 85px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  position: relative;
+  right: -230px;
+  top: -15px;
+}
+ 
 .homePage .post {
   width: 600px;
   height: auto;
@@ -295,7 +260,8 @@ background-color: black;
   background-color: rgb(250, 250, 250);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 20px;
-  padding: 20px;
+  padding: 30px;
+  border: 1px solid grey;
   border-radius: 15px;
 }
 

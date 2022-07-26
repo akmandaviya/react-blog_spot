@@ -24,9 +24,14 @@ const Home = ({isAuth}) => {
 
   return (
     <div className='homePage'>
-      <h1>Blog.me !!</h1>
+      <div className='sub-homepage'>
+        <h1>Task Dashboard  </h1>
+        <button className='save-btn'>Save</button>
+        <button className='like-btn'>Like</button>
+      </div>
      {postList.map((post) => {
-      return <div className='post'> 
+      return  <div>
+         <div className='post'> 
           <div className='postHeader'>
             <div className='title'> <h3>{post.title}</h3></div>
           </div>
@@ -43,6 +48,7 @@ const Home = ({isAuth}) => {
           <div className='postTextContainer'>{post.post}</div>
           <h3>@{post.author.name}</h3>
       </div>
+      </div>  
      })}
     </div>
   )

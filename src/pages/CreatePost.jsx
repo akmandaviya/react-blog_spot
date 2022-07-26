@@ -27,7 +27,7 @@ useEffect(()=> {
   return (
     <div className='createPostPage'>
       <div className='cpContainer'>
-        <h1>Create a Blog</h1>
+        <h1>Add a new Task</h1>
         <div className='inputGp'>
           <label>Title:</label>
           <input placeholder='Add a title...' type='text'
@@ -38,7 +38,7 @@ useEffect(()=> {
           <textarea placeholder='Add your post...' 
           onChange={(event) => {setPost(event.target.value)}}></textarea>
         </div>
-        <button className='cp-button' onClick={createPost}>Add Post</button>
+        <button className='cp-button' onClick={createPost}>Add</button>
       </div>
     </div>
   )

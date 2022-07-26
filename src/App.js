@@ -25,12 +25,20 @@ return (
     
     {/* navbar */}
     <nav>
+    <h1>doodle </h1>
       <Link to='/'>Home</Link>
-      
-     {!isAuth ? (<Link to='/login'>Login</Link>
+      <Link to='/'>Inspiration</Link>
+      <Link to='/'>Find Work</Link>
+      <Link to='/'>Learn Design</Link>
+      <Link to='/'>Go Pro</Link>
+      <Link to='/'>Design Files</Link>
+      <Link to='/'>Hire Designers</Link>
+
+     {!isAuth ? (<Link className="sign-in" to='/login'>Sign in</Link>
+     
      ) : (
       <>
-      <Link to='/createpost'>New Blog</Link>
+      <Link to='/createpost'>New Task</Link>
      <button className="signout" onClick={signOutHere}>Sign Out</button>
      </>
      )} 
