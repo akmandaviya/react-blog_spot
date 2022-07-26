@@ -1,5 +1,5 @@
-Blog.Me !!
-A blog site using react !!
+
+A task handle site using react !!
 Tech Stack used : HTML, CSS, JavaScript, React JS, Firebase
 
 
